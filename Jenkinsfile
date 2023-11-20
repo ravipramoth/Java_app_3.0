@@ -62,7 +62,6 @@ pipeline {
         }
 
         stage('Quality Gate Status Check : Sonarqube') {
-            when { expression {  params.action == 'create' } }
             steps {
                 script {
                     timeout(time: 1, unit: 'HOURS') {
